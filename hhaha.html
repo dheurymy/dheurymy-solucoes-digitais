@@ -1,0 +1,28 @@
+
+
+<script>
+   const navItemMobile1 = document.getElementById('nav-item-mobile-1');
+   const navItemMobile2 = document.getElementById('nav-item-mobile-2');
+   const navItemMobile3 = document.getElementById('nav-item-mobile-3');
+
+   navItemMobile1.addEventListener('click', () => {
+      navItemMobile1.classList.add('nav-item-mobile-active');
+      navItemMobile2.classList.remove('nav-item-mobile-active');
+      navItemMobile3.classList.remove('nav-item-mobile-active');
+   });
+
+   navItemMobile2.addEventListener('click', () => {
+      navItemMobile1.classList.remove('nav-item-mobile-active');
+      navItemMobile2.classList.add('nav-item-mobile-active');
+      navItemMobile3.classList.remove('nav-item-mobile-active');
+   });
+
+   navItemMobile3.addEventListener('click', () => {
+      navItemMobile1.classList.remove('nav-item-mobile-active');
+      navItemMobile2.classList.remove('nav-item-mobile-active');
+      navItemMobile3.classList.add('nav-item-mobile-active');
+   });
+
+   
+   
+</script>

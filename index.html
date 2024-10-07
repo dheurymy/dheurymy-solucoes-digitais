@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+         content="width=device-width, initial-scale=1.0">
+      <title>Portifólio - Dheurymy</title>
+      <link rel="stylesheet" href="assets/styles/reset.css">
+      <link rel="stylesheet" href="assets/styles/index.css">
+   </head>
+   <body>
+      <header>
+         <div class="menu" id="menu" onclick="toggleMenu()">
+            <div class="hamburguer-line" id="hamburguer-line-1"></div>
+            <div class="hamburguer-line" id="hamburguer-line-2"></div>
+            <div class="hamburguer-line" id="hamburguer-line-3"></div>
+         </div>
+         <div class="logo">
+            <h1>DHEURYMY</h1>
+            <p>soluções digitais</p>
+         </div>
+         <nav>
+
+            <div class="nav-item nav-item-active" id="nav-item-1">
+               <a href="#" class="nav-link">Sobre</a>
+               <div class="link-tab"></div>
+            </div>
+            <div class="nav-item" id="nav-item-2">
+               <a href="#" class="nav-link">Habilidades</a>
+               <div class="link-tab"></div>
+            </div>
+            <div class="nav-item" id="nav-item-3">
+               <a href="#" class="nav-link">Projetos</a>
+               <div class="link-tab"></div>
+            </div>
+
+         </nav>
+
+         <div class="contact">
+            <button class="contactButton">
+               Contatos
+            </button>
+         </div>
+      </header>
+
+      <nav class="mobile" id="nav-mobile">
+         <div class="nav-item-mobile nav-item-mobile-active"
+            id="nav-item-mobile-1">
+            <a href="#" class="nav-link-mobile">Sobre</a>
+            <div class="link-tab-mobile"></div>
+         </div>
+         <div class="nav-item-mobile" id="nav-item-mobile-2">
+            <a href="#" class="nav-link-mobile">Habilidades</a>
+            <div class="link-tab-mobile"></div>
+         </div>
+         <div class="nav-item-mobile" id="nav-item-mobile-3">
+            <a href="#" class="nav-link-mobile">Projetos</a>
+            <div class="link-tab-mobile"></div>
+         </div>
+      </nav>
+
+      <script>
+         const navItem1 = document.getElementById('nav-item-1');
+         const navItem2 = document.getElementById('nav-item-2');
+         const navItem3 = document.getElementById('nav-item-3');
+
+         navItem1.addEventListener('click', () => {
+            navItem1.classList.add('nav-item-active');
+            navItem2.classList.remove('nav-item-active');
+            navItem3.classList.remove('nav-item-active');
+         });
+
+         navItem2.addEventListener('click', () => {
+            navItem1.classList.remove('nav-item-active');
+            navItem2.classList.add('nav-item-active');
+            navItem3.classList.remove('nav-item-active');
+         });
+
+         navItem3.addEventListener('click', () => {
+            navItem1.classList.remove('nav-item-active');
+            navItem2.classList.remove('nav-item-active');
+            navItem3.classList.add('nav-item-active');
+         });
+
+         const menu = document.getElementById('menu');
+         const navMobile = document.getElementById('nav-mobile');
+
+         function toggleMenu() {
+            
+            menu.classList.toggle('open');
+            if (navMobile.style.display === "flex") {
+               navMobile.style.display = "none";  
+           } else {
+               navMobile.style.display = "flex"; 
+           }
+        };
+
+
+         const navItemMobile1 = document.getElementById('nav-item-mobile-1');
+         const navItemMobile2 = document.getElementById('nav-item-mobile-2');
+         const navItemMobile3 = document.getElementById('nav-item-mobile-3');
+
+         navItemMobile1.addEventListener('click', () => {
+            navItemMobile1.classList.add('nav-item-mobile-active');
+            navItemMobile2.classList.remove('nav-item-mobile-active');
+            navItemMobile3.classList.remove('nav-item-mobile-active');
+            toggleMenu();
+         });
+
+         navItemMobile2.addEventListener('click', () => {
+            navItemMobile1.classList.remove('nav-item-mobile-active');
+            navItemMobile2.classList.add('nav-item-mobile-active');
+            navItemMobile3.classList.remove('nav-item-mobile-active');
+            toggleMenu();
+         });
+
+         navItemMobile3.addEventListener('click', () => {
+            navItemMobile1.classList.remove('nav-item-mobile-active');
+            navItemMobile2.classList.remove('nav-item-mobile-active');
+            navItemMobile3.classList.add('nav-item-mobile-active');
+            toggleMenu();
+         });
+
+         
+ 
+      </script>
+
+   </body>
+</html>

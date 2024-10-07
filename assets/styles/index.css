@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+:root {
+
+   --corFundoHeader: #ffc4e4;
+   --corFundo: #ffe8c8;
+   --corDestaques: #45F9C6;
+   --corRodape: #48ab72;
+   --corTexto: #0c0c0c;
+}
+
+body {
+   width: 100%;
+   min-height: 100dvh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: start;
+
+   gap: 2em;
+
+
+   font-family: "Lekton", monospace;
+
+   background-color: var(--corFundo);
+}
+
+header {
+   width: 100%;
+   height: 8dvh;
+
+   padding-top: 1em;
+
+
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+
+   background-color: var(--corFundoHeader);
+   border-bottom: 1px solid var(--corTexto);
+}
+
+.menu {
+   display: none;
+}
+
+.logo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 20%;
+   height: 100%;
+
+   padding-bottom: 0.5em;
+}
+
+.logo>h1 {
+   width: 100%;
+
+   font-family: "Bungee Outline", sans-serif;
+   font-size: 2em;
+   font-weight: 600;
+   text-align: center;
+}
+
+.logo>p {
+   width: 100%;
+   font-size: 1.3em;
+   text-align: center;
+}
+
+nav {
+   width: 60%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+
+}
+
+.mobile {
+   display: none;
+}
+
+.menu {
+   width: 5%;
+   height: 100%;
+}
+
+.nav-item {
+   width: 30%;
+   height: 100%;
+
+   cursor: pointer;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.nav-link {
+   width: 100%;
+   height: 100%;
+
+   text-align: center;
+
+   cursor: pointer;
+
+   font-size: 1em;
+   font-weight: 500;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.nav-item-active {
+
+   width: 30%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+
+
+
+   border-radius: 10px 10px 0px 0px;
+   background-color: var(--corFundo);
+
+   border: 1px solid var(--corTexto);
+   border-bottom: 2px solid var(--corFundo);
+}
+
+.link-tab {
+   height: 5px;
+   width: 50%;
+
+
+
+}
+
+.nav-item-active>div {
+   border: 1px solid var(--corTexto);
+   border-radius: 3px;
+
+   background-color: var(--corFundoHeader);
+}
+
+.contact {
+   width: 15%;
+
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.contactButton {
+   width: 90%;
+   cursor: pointer;
+
+   border: 1px solid var(--corTexto);
+   border-radius: 0.5em;
+
+   font-size: large;
+   font-weight: 500;
+
+   padding: 0;
+}
+
+.contactButton:hover {
+   background-color: var(--corFundo);
+   font-weight: 800;
+}
+
+@media screen and (max-width: 1200px) {
+   .logo>h1 {
+      font-size: large;
+   }
+
+   .logo>p {
+      font-size: small;
+   }
+
+   .nav-link {
+      font-size: small;
+   }
+
+   .contactButton {
+      font-size: medium;
+   }
+}
+
+@media screen and (max-width: 900px) {
+   .contactButton {
+      width: 100%;
+      font-size: smaller;
+   }
+
+   .logo>p {
+      font-size: smaller;
+   }
+}
+
+@media screen and (max-width: 650px) {
+   .logo>h1 {
+      font-size: small;
+   }
+
+   .logo>p {
+      font-size: xx-small;
+   }
+
+   .nav-link {
+      font-size: x-small;
+   }
+
+   .contactButton {
+      font-size: xx-small;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   nav {
+      display: none;
+   }
+
+   .logo {
+      width: 55%;
+   }
+
+   .contact {
+      width: 35%;
+   }
+
+   .contactButton {
+      width: 90%;
+   }
+
+   .menu {
+      width: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      cursor: pointer;
+   }
+
+   .hamburguer-line {
+      width: 25px;
+      height: 3px;
+
+      border-radius: 5px;
+
+      background-color: var(--corTexto);
+
+      transition: all 0.3s ease-in-out;
+   }
+
+   #hamburguer-line-1,
+   #hamburguer-line-2,
+   #hamburguer-line-3 {
+      position: relative;
+   }
+
+/* Animação de transformar o hambúrguer em "X" */
+.menu.open #hamburguer-line-1 {
+    transform: translateY(7.5px) rotate(-45deg);
+}
+
+.menu.open #hamburguer-line-2 {
+    opacity: 0;
+}
+
+.menu.open #hamburguer-line-3 {
+    transform: translateY(-7.5px) rotate(45deg);
+}
+
+   .mobile {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      height: 80dvh;
+   }
+
+   
+
+   .nav-item-mobile {
+      width: 100vw;
+      height: 150px;
+
+      cursor: pointer;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+   }
+
+   .nav-link-mobile {
+      width: 100%;
+      height: 100%;
+
+      text-align: center;
+
+      cursor: pointer;
+
+      font-size: 1em;
+      font-weight: 500;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+   }
+
+   .nav-item-mobile-active {
+
+      width: 100%;
+      height: 100px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+
+
+      border-radius: 10px;
+      background-color: var(--corFundo);
+
+      border: 1px solid var(--corTexto);
+
+   }
+
+   .link-tab-mobile {
+      height: 5px;
+      width: 50%;
+
+      margin-bottom: 5px;
+
+
+
+   }
+
+   .nav-item-mobile-active>div {
+      border: 1px solid var(--corTexto);
+      border-radius: 3px;
+
+      background-color: var(--corFundoHeader);
+   }
+}
