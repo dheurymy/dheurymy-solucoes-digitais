@@ -245,6 +245,14 @@ nav {
       width: 55%;
    }
 
+   .logo>h1 {
+      font-size: large;
+   }
+
+   .logo>p {
+      font-size: smaller;
+   }
+
    .contact {
       width: 35%;
    }
