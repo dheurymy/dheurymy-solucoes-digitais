@@ -6,7 +6,11 @@
          content="width=device-width, initial-scale=1.0">
       <title>Portifólio - Dheurymy</title>
       <link rel="stylesheet" href="assets/styles/reset.css">
-      <link rel="stylesheet" href="assets/styles/index.css">
+      <link rel="stylesheet" href="assets/styles/style.css">
+      <link rel="stylesheet" href="assets/styles/header.css">
+      <link rel="stylesheet" href="assets/styles/sobre.css">
+      <link rel="stylesheet" href="assets/styles/habilidades.css">
+      <link rel="stylesheet" href="assets/styles/projetos.css">
    </head>
    <body>
       <header>
@@ -36,11 +40,7 @@
 
          </nav>
 
-         <div class="contact">
-            <button class="contactButton">
-               Contatos
-            </button>
-         </div>
+         
       </header>
 
       <nav class="mobile" id="nav-mobile">
@@ -59,71 +59,66 @@
          </div>
       </nav>
 
-      <script>
-         const navItem1 = document.getElementById('nav-item-1');
-         const navItem2 = document.getElementById('nav-item-2');
-         const navItem3 = document.getElementById('nav-item-3');
 
-         navItem1.addEventListener('click', () => {
-            navItem1.classList.add('nav-item-active');
-            navItem2.classList.remove('nav-item-active');
-            navItem3.classList.remove('nav-item-active');
-         });
-
-         navItem2.addEventListener('click', () => {
-            navItem1.classList.remove('nav-item-active');
-            navItem2.classList.add('nav-item-active');
-            navItem3.classList.remove('nav-item-active');
-         });
-
-         navItem3.addEventListener('click', () => {
-            navItem1.classList.remove('nav-item-active');
-            navItem2.classList.remove('nav-item-active');
-            navItem3.classList.add('nav-item-active');
-         });
-
-         const menu = document.getElementById('menu');
-         const navMobile = document.getElementById('nav-mobile');
-
-         function toggleMenu() {
+      <main id="sobre">
+         <div class="main-text typewriter-container">
+            <h1 class="typewriter-text"> 
+               Oi, eu sou o <strong>Dheurymy</strong>!
+            </h1>
+            <p>
+               Sou um engenheiro mecânico que acabou encontrando a felicidade no mundo da programação. Sou pai de dois gatos, Saray Evo e Kat Mandu. Sou um fã inveterado de RuPaul's Drag Race, Naruto e One Piece, jogo Valorant pra relaxar (e acabo me estressando mais, hahaha), sou um membro orgulhoso da comunidade LGBT+, amo viajar e conhecer lugares novos. Entre em contato comigo, vamos pensar em uma solucao digital para sua realidade. 
+            </p>
             
-            menu.classList.toggle('open');
-            if (navMobile.style.display === "flex") {
-               navMobile.style.display = "none";  
-           } else {
-               navMobile.style.display = "flex"; 
-           }
-        };
+<div class="card">
+  <a href="https://www.instagram.com/dheurymy" class="socialContainer containerOne">
+   <img src="assets/images/logo-instagram.svg" class="socialSvg instagramSvg" alt="">
+   
+  </a>
+  
+  <a href="https://github.com/dheurymy" class="socialContainer containerTwo">
+   <img src="assets/images/logo-github.svg"  class="socialSvg githubSvg" alt="">
+     </a>
+
+    
+  <a href="https://www.linkedin.com/in/dheurymy/" class="socialContainer containerThree">
+   <img src="assets/images/logo-linkedin.svg" class="socialSvg linkdinSvg" alt="">
+  </a>
+  
+  <a href="https://wa.me/qr/V7ZEJIX6NYYXD1" class="socialContainer containerFour">
+   <img src="assets/images/logo-whatsapp.svg" class="socialSvg whatsappSvg" alt="">
+    
+  </a>
+</div>             
 
 
-         const navItemMobile1 = document.getElementById('nav-item-mobile-1');
-         const navItemMobile2 = document.getElementById('nav-item-mobile-2');
-         const navItemMobile3 = document.getElementById('nav-item-mobile-3');
 
-         navItemMobile1.addEventListener('click', () => {
-            navItemMobile1.classList.add('nav-item-mobile-active');
-            navItemMobile2.classList.remove('nav-item-mobile-active');
-            navItemMobile3.classList.remove('nav-item-mobile-active');
-            toggleMenu();
-         });
+         </div>
 
-         navItemMobile2.addEventListener('click', () => {
-            navItemMobile1.classList.remove('nav-item-mobile-active');
-            navItemMobile2.classList.add('nav-item-mobile-active');
-            navItemMobile3.classList.remove('nav-item-mobile-active');
-            toggleMenu();
-         });
+         <div class="main-image">
+            <div class="main-image-right">
+               <div class="main-image-right-frame">
+                  <img src="assets/images/perfil.jpg" alt="">
+                  <p>esse sou eu</p>
+               </div>
+            </div>
+            <div class="main-image-left">
+               <div class="main-image-left-frame">
+                  <img src="assets/images/gatos2.jpg" alt="">
+                  <p>esses são meus gatos</p>
+               </div>
+            </div>
+         </div>
+      </main>
 
-         navItemMobile3.addEventListener('click', () => {
-            navItemMobile1.classList.remove('nav-item-mobile-active');
-            navItemMobile2.classList.remove('nav-item-mobile-active');
-            navItemMobile3.classList.add('nav-item-mobile-active');
-            toggleMenu();
-         });
+      <main id="habilidades">
+         habilidades
+      </main>
 
-         
- 
-      </script>
+      <main id="projetos">
+         projetos
+      </main>
+
+      <script src="assets/scripts/index.js"></script>
 
    </body>
 </html>
