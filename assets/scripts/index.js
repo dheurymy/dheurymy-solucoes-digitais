@@ -43,6 +43,9 @@ function toggleMenu() {
     navMobile.style.display = "none";
   } else {
     navMobile.style.display = "flex";
+    secaoSobre.style.display = "none";
+  secaoHabilidades.style.display = "none";
+  secaoProjetos.style.display = "none";
   }
 }
 
