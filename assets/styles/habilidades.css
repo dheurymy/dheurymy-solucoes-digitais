@@ -1,3 +1,71 @@
 #habilidades {
    display: none;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 5%;
+
+   width: 100%;
+   height: 80dvh;
+}
+
+.habilidades-text {
+   width: 50%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 2em;
+
+   text-align: justify;
+}
+
+#habilidades-text-title {
+   font-size: 1.5em;
+}
+
+
+.habilidades-text > h1 {
+   width: 90%;
+
+   font-size: 3em;
+}
+
+.habilidades-text > h1 > strong {
+   color: var(--corRodape);
+}
+
+.habilidades-text-block {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: left;
+   gap: 1em;
+
+   width: 90%;
+
+}
+
+.habilidades-text-block > p {
+   width: 90%;
+
+   font-size: 1em;
+}
+
+.habilidades-text-check {
+   width: 40px;
+}
+
+.habilidades-text-block > p  > strong {
+   color: var(--corRodape);
+}
+
+.habilidades-image {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 50%;
 }
