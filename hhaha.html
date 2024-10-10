@@ -1,28 +1,68 @@
 
+<style>
+   /* From Uiverse.io by alexruix */ 
+.badge {
+   width: 190px;
+   height: 254px;
+   border-radius: 20px;
+   background: #f5f5f5;
+   position: relative;
+   padding: 1.8rem;
+   border: 2px solid #c3c6ce;
+   transition: 0.5s ease-out;
+   overflow: visible;
+  }
+  
+  .badge-details {
+   color: black;
+   height: 100%;
+   gap: .5em;
+   display: grid;
+   place-content: center;
+  }
+  
+  .badge-button {
+   transform: translate(-50%, 125%);
+   width: 60%;
+   border-radius: 1rem;
+   border: none;
+   background-color: #008bf8;
+   color: #fff;
+   font-size: 1rem;
+   padding: .5rem 1rem;
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   opacity: 0;
+   transition: 0.3s ease-out;
+  }
+  
+  .badge-text-body {
+   color: rgb(134, 134, 134);
+  }
+  
+  /*Text*/
+  .badge-text-title {
+   font-size: 1.5em;
+   font-weight: bold;
+  }
+  
+  /*Hover*/
+  .badge:hover {
+   border-color: #008bf8;
+   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .badge:hover .badge-button {
+   transform: translate(-50%, 50%);
+   opacity: 1;
+  }
+</style>
 
-<script>
-   const navItemMobile1 = document.getElementById('nav-item-mobile-1');
-   const navItemMobile2 = document.getElementById('nav-item-mobile-2');
-   const navItemMobile3 = document.getElementById('nav-item-mobile-3');
-
-   navItemMobile1.addEventListener('click', () => {
-      navItemMobile1.classList.add('nav-item-mobile-active');
-      navItemMobile2.classList.remove('nav-item-mobile-active');
-      navItemMobile3.classList.remove('nav-item-mobile-active');
-   });
-
-   navItemMobile2.addEventListener('click', () => {
-      navItemMobile1.classList.remove('nav-item-mobile-active');
-      navItemMobile2.classList.add('nav-item-mobile-active');
-      navItemMobile3.classList.remove('nav-item-mobile-active');
-   });
-
-   navItemMobile3.addEventListener('click', () => {
-      navItemMobile1.classList.remove('nav-item-mobile-active');
-      navItemMobile2.classList.remove('nav-item-mobile-active');
-      navItemMobile3.classList.add('nav-item-mobile-active');
-   });
-
-   
-   
-</script>
+<div class="badge">
+   <div class="badge-details">
+     <p class="badge-text-title">badge title</p>
+     <p class="bage-text-body">Here are the details of the badge</p>
+   </div>
+   <button class="badge-button">More info</button>
+ </div>
