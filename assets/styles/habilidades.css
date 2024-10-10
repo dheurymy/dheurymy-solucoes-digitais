@@ -129,11 +129,7 @@
    transition: 0.3s ease-out;
   }
   
-  
-  
- 
-  
-  /*Hover*/
+
   .badge:hover {
    border-color: var(--corRodape);
    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
@@ -143,3 +139,179 @@
    transform: translate(-50%, 50%);
    opacity: 1;
   }
+
+@media screen and (max-width: 1500px) {
+   .habilidades-text {
+      
+      gap: 1.5em;
+   }
+   
+   #habilidades-text-title {
+      font-size: 1.2em;
+   }
+
+   .habilidades-image-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+   
+      width: 90%;
+   }
+   
+   
+   .badge {
+      width: 80px;
+      height: 80px;
+      
+     }
+     
+     
+   
+     .badge-image {
+      width: 80px;
+      height: 80px;
+     }
+   
+     .png-image {
+      width: 80px;
+      height: 80px;
+     }
+
+     .badge-button {
+      font-size: 0.7em;
+     }
+   
+   
+   
+}
+
+@media screen and (max-width: 1100px) {
+   .habilidades-text {
+      
+      gap: 1em;
+   }
+   
+   #habilidades-text-title {
+      font-size: 0.9em;
+   }
+
+   .habilidades-text-block > p {
+      font-size: 0.9em;
+   }
+   
+   .habilidades-text-check {
+      width: 30px;
+   }
+
+}
+
+@media screen and (max-width: 800px) {
+   .habilidades-text {
+      width: 95%;
+      
+      gap: 0.8em;
+   }
+   
+   #habilidades-text-title {
+      font-size: 0.85em;
+   }
+
+   .habilidades-text-block > p {
+      font-size: 0.85em;
+   }
+   
+   .habilidades-text-check {
+      width: 30px;
+   }
+
+   .habilidades-image-content {
+      
+      gap: 1.5rem;
+      width: 95%;
+   }
+   
+   
+   .badge {
+      width: 75px;
+      height: 75px;
+     }
+   
+     .badge-image {
+      width: 75px;
+      height: 75px;
+     }
+   
+     .png-image {
+      width: 70px;
+      height: 70px;
+     }
+     
+     .badge-button {
+      width: 95%;
+      
+      font-size: 0.7em;
+      }
+     
+
+}
+
+@media screen and (max-width: 450px) {
+   #habilidades {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2em;
+      
+      width: 100%;
+      height: auto;
+   }
+
+   .habilidades-text {
+      width: 95%;
+   
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+   }
+   
+   #habilidades-text-title {
+      font-size: 0.7em;
+   }
+
+   .habilidades-text-block {
+      
+      gap: 0.5em;
+   
+      width: 95%;
+   
+   }
+   
+   .habilidades-text-block > p {
+      width: 90%;
+   
+      font-size: 0.8em;
+   }
+   
+   .habilidades-text-check {
+      width: 30px;
+   }
+   
+   
+   .habilidades-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   
+      width: 95%;
+   }
+   
+  
+
+}
